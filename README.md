@@ -1,4 +1,4 @@
-# Ecommerce
+# Shopigo
 
 A production-ready Flutter e-commerce application scaffold. This README covers project overview, setup, running on all platforms, structure, and common workflows.
 
