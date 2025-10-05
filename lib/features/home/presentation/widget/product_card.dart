@@ -41,11 +41,13 @@ class ProductCard extends StatelessWidget {
               child: Hero(
                 tag: productName,
                 child: Image.network(
-                  imageUrl ?? 'https://via.placeholder.com/300x200?text=No+Image',
+                  imageUrl ??
+                      'https://via.placeholder.com/300x200?text=No+Image',
                   height: 170.h,
                   width: double.infinity,
                   fit: BoxFit.cover,
-                  errorBuilder: (context, error, stackTrace) => const Icon(Icons.error, color: Colors.red),
+                  errorBuilder: (context, error, stackTrace) =>
+                      const Icon(Icons.error, color: Colors.red),
                   loadingBuilder: (context, child, loadingProgress) {
                     if (loadingProgress == null) return child;
                     return const Center(child: LoadingLottie());

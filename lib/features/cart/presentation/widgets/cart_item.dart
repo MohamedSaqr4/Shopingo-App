@@ -98,7 +98,8 @@ class _CartItemState extends State<CartItem> {
                       child: Image.network(
                         widget.imageUrl ?? 'https://via.placeholder.com/150',
                         fit: BoxFit.cover,
-                        errorBuilder: (context, error, stack) => const Icon(Icons.error, color: Colors.red),
+                        errorBuilder: (context, error, stack) =>
+                            const Icon(Icons.error, color: Colors.red),
                         loadingBuilder: (context, child, loading) {
                           if (loading == null) return child;
                           return const Center(child: LoadingLottie());

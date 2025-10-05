@@ -53,7 +53,8 @@ class ProductDetailsView extends StatelessWidget {
                           ? product.images!.first
                           : 'https://via.placeholder.com/600x400?text=No+Image',
                       fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) => const Icon(Icons.error, color: Colors.red),
+                      errorBuilder: (context, error, stackTrace) =>
+                          const Icon(Icons.error, color: Colors.red),
                       loadingBuilder: (context, child, loadingProgress) {
                         if (loadingProgress == null) return child;
                         return const Center(child: LoadingLottie());
@@ -128,8 +129,8 @@ class ProductDetailsView extends StatelessWidget {
                     iconBefore: Icon(Icons.shopping_bag, size: 22.sp),
                     onPressed: () async {
                       var cartBox = await Hive.openBox(EndPoints.cartBox);
-                      await cartBox.put( product.id as int ,{
-                         'productName': product.title.toString(),
+                      await cartBox.put(product.id as int, {
+                        'productName': product.title.toString(),
                         'productPrice': product.price,
                         'productImage': product.images!.first,
                       });
